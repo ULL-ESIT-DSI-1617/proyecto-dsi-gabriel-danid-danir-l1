@@ -6,12 +6,13 @@
                 '(?<tipo> [\\/\\-\\*\\+])                              ' +
                 '(\\s*)';
 
-  function Medida(valor,tipo)
+  function Medida(valor,valor2,tipo)
   {
     console.log("Accedo a clase Medida");
     if(tipo)
     {
       this.valor = valor || 0;
+      this.valor2 = valor2 || 0;
       this.tipo  = tipo;
     }
     else
@@ -23,10 +24,13 @@
       if(expresion)
       {
         var numero = expresion.valor;
+        var numero2 = expresion.to;
         numero = parseFloat(numero);
+        numero2 = parseFloat(numero2);
         var tipo = expresion.tipo;
         tipo = tipo.toLowerCase();
         this.valor = numero;
+        this.valor2 = numero2;
         this.tipo = tipo;
         console.log("Valor: " + this.valor + ", Tipo: " + this.tipo);
       }
@@ -57,16 +61,14 @@
       destino = destino.toLowerCase();
       console.log("Numero:"+numero+",Tipo:"+tipo+",Destino:"+destino);
       try {
-        var source = new measures[tipo](numero);  // new Fahrenheit(32)
+        var source = new measures[tipo](numero,numero2);  // new Fahrenheit(32)
         console.log("Source:"+source);
-        var target = "to"+measures[destino].name; // "toCelsius"
-        console.log("Target:"+target);
-        console.log("Return:"+source[target]().valor);
-        return source[target]().valor + " "+measures[destino].name; // "0 Celsius"
+        console.log("Return:"+source.operacion().valor);
+        return source.operacion().valor ; // "0 Celsius"
       }
       catch(err) {
         if (tipo == destino){
-          return numero + " " + destino;
+          return numero + "       " + destino;
         }
         else{
           return 'Desconozco como convertir desde "'+tipo+'" hasta "'+destino+'"';

@@ -2,7 +2,7 @@
   
     var measures = Medida.measures || {};
 
-    function Distancia(valor,tipo)
+    function Distancia(valor,valor2,tipo)
     {
       console.log("Accedo a clase Distancia");
       Medida.call(this,valor,tipo);

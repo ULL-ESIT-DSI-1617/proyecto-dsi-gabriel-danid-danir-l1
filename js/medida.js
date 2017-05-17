@@ -12,11 +12,10 @@ Medida.prototype.to_s = function(){
     return string;
   }
 
-  Medida.regexp = XRegExp('(?<src> [-+]?[0-9]+(\.[0-9]+)?(?:e[+-]?[0-9]+)?) #valor              \n' +
-                          '(?<espacio> \\s*)                                                       \n' +
-                  			  '(?<tipo> \\s*.*)                      # tipo de entrada   \n' +
-                          '(?<espacio2> \\s*)                                                    \n' +
-                  			  '(?<dst> [-+]?[0-9]+(\.[0-9]+)?(?:e[+-]?[0-9]+)?)                       # tipo destino', 'x');
+  Medida.regexp = XRegExp('(?<src> [0-9]+) #valor              \n' +
+                  			  '(?<tipo> \s*[^0-9]+)                      # tipo de entrada   \n' +
+                  			//  '(?<to> \s*(?:to)?\s*)                             # to opcional       \n' +
+                  			  '(?<dst> \\s*[0-9]+)  #valor                      # tipo destino', 'x');
 
   Medida.measures = Medida.measures || {};
 
@@ -28,6 +27,7 @@ Medida.prototype.to_s = function(){
 
       var numero = match.src,
           tipo   = match.tipo.toLowerCase(), //pasamos a minuscula
+          tipo = tipo.trim();
           destino = match.dst.toLowerCase();
       var myHash = {'-': "rest", '+': "mas", '*': "mult", '/': "div"}
       var aux = myHash[tipo];

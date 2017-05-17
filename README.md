@@ -4,9 +4,9 @@ La idea principal de nuestro proyecto es la realización de una calculadora, en 
 
 
 ## Integrantes del proyecto
-* Gabriel Fernández Castro
-* Daniel Díaz Rodríguez
-* Daniel Rodríguez Martín
+* [Gabriel Fernández Castro](https://github.com/alu0100885453)
+* [Daniel Díaz Rodríguez](https://github.com/alu0100882186)
+* [Daniel Rodríguez Martín](https://github.com/alu0100886764)
 
 ## Herramientas utiizadas
 ### Express

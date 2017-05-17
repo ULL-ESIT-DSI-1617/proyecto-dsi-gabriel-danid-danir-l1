@@ -40,5 +40,5 @@ Medida.prototype.to_s = function(){
       }
     }
     else
-      return "Introduzca una temperatura valida: 330e-1F C";
+      return "Introduzca una operación válida.";
   };

@@ -14,9 +14,9 @@ Medida.prototype.to_s = function(){
 
   Medida.regexp = XRegExp('(?<src> [-+]?[0-9]+(\.[0-9]+)?(?:e[+-]?[0-9]+)?) #valor              \n' +
                           '(?<espacio> \\s*)                                                       \n' +
-                  			  '(?<tipo> \\s*[A-Za-z]+)                      # tipo de entrada   \n' +
-                  			  '(?<to> \\s*(?:to)?\\s*)                             # to opcional       \n' +
-                  			  '(?<dst> [A-Za-z0-9]+)                       # tipo destino', 'x');
+                  			  '(?<tipo> \\s*.*)                      # tipo de entrada   \n' +
+                          '(?<espacio2> \\s*)                                                    \n' +
+                  			  '(?<dst> [-+]?[0-9]+(\.[0-9]+)?(?:e[+-]?[0-9]+)?)                       # tipo destino', 'x');
 
   Medida.measures = Medida.measures || {};
 
@@ -25,10 +25,13 @@ Medida.prototype.to_s = function(){
     var match = XRegExp.exec(valor, Medida.regexp);
 
     if (match) {
+
       var numero = match.src,
           tipo   = match.tipo.toLowerCase(), //pasamos a minuscula
           destino = match.dst.toLowerCase();
-
+      var myHash = {'-': "rest", '+': "mas", '*': "mult", '/': "div"}
+      var aux = myHash[tipo];
+      tipo = aux;
       try {
         console.log(numero + " " + tipo + " " + destino);
         var source = new measures[tipo](numero, destino); //new measures['k'](35) => new Kelvin(35)

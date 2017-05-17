@@ -70,7 +70,7 @@ Div.prototype = new OperacionesBasicas();
 
 Div.prototype.operacion = function()
 {
-  return (this.numero1);
+  return (this.numero1/this.numero2);
 }
 
 measures.div = Div;

@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ULL-ESIT-DSI-1617/proyecto-dsi-gabriel-danid-danir-l1.svg?branch=master)](https://travis-ci.org/ULL-ESIT-DSI-1617/proyecto-dsi-gabriel-danid-danir-l1)
 # Proyecto final DSI: Calculadora.
 ## Descripción
 La idea principal de nuestro proyecto es la realización de una calculadora, en la cual, podremos realizar unas operaciones básicas(suma, resta, multiplicación, división) así como unas operaciones más avanzadas(módulo, exponencial).

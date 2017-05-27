@@ -12,11 +12,10 @@ Medida.prototype.to_s = function(){
     return string;
   }
 
-  Medida.regexp = XRegExp('(?<src> [-+]?[0-9]+(\.[0-9]+)?(?:e[+-]?[0-9]+)?) #valor              \n' +
-                          '(?<espacio> \\s*)                                                       \n' +
-                  			  '(?<tipo> \\s*[A-Za-z]+)                      # tipo de entrada   \n' +
-                  			  '(?<to> \\s*(?:to)?\\s*)                             # to opcional       \n' +
-                  			  '(?<dst> [A-Za-z0-9]+)                       # tipo destino', 'x');
+  Medida.regexp = XRegExp('(?<src> [0-9]+) #valor              \n' +
+                  			  '(?<tipo> \s*[^0-9]+)                      # tipo de entrada   \n' +
+                  			//  '(?<to> \s*(?:to)?\s*)                             # to opcional       \n' +
+                  			  '(?<dst> \\s*[0-9]+)  #valor                      # tipo destino', 'x');
 
   Medida.measures = Medida.measures || {};
 
@@ -25,10 +24,14 @@ Medida.prototype.to_s = function(){
     var match = XRegExp.exec(valor, Medida.regexp);
 
     if (match) {
+
       var numero = match.src,
           tipo   = match.tipo.toLowerCase(), //pasamos a minuscula
+          tipo = tipo.trim();
           destino = match.dst.toLowerCase();
-
+      var myHash = {'-': "rest", '+': "mas", '*': "mult", '/': "div"}
+      var aux = myHash[tipo];
+      tipo = aux;
       try {
         console.log(numero + " " + tipo + " " + destino);
         var source = new measures[tipo](numero, destino); //new measures['k'](35) => new Kelvin(35)
@@ -40,5 +43,5 @@ Medida.prototype.to_s = function(){
       }
     }
     else
-      return "Introduzca una temperatura valida: 330e-1F C";
+      return "Introduzca una operación válida.";
   };

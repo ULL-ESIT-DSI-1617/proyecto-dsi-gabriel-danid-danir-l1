@@ -8,7 +8,7 @@
     "passport"
   ],
   "scripts": {
-  "test": "vows --spec"
+  "test": "./node_modules/mocha/bin/mocha"
   },
   "author": "Jared Hanson",
   "license": "Unlicense",

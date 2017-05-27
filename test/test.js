@@ -1,5 +1,5 @@
 'use strict'
-var Medida = require('../js/medida.js');
+var Medida = require('./../public/js/medida.js');
 var should = require('should')
 
 describe("Prueba de la suma", function()  {

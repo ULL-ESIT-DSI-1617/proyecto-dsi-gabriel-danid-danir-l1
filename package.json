@@ -7,6 +7,9 @@
     "express",
     "passport"
   ],
+  "scripts": {
+  "test": "vows --spec"
+  },
   "author": "Jared Hanson",
   "license": "Unlicense",
   "homepage": "https://github.com/passport/express-4.x-facebook-example",

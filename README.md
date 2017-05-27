@@ -24,4 +24,4 @@ JavaScript (abreviado comúnmente JS) es un lenguaje de programación interpreta
 ### HTML
 HTML hace referencia al lenguaje de marcado para la elaboración de páginas web. 
 
-CLIENT_ID=369716050096850 CLIENT_SECRET='3c7d3d80fb916299658638ca689a28c6' node server.js
+$ CLIENT_ID=369716050096850 CLIENT_SECRET='3c7d3d80fb916299658638ca689a28c6' node server.js

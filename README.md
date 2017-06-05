@@ -25,4 +25,11 @@ JavaScript (abreviado comúnmente JS) es un lenguaje de programación interpreta
 ### HTML
 HTML hace referencia al lenguaje de marcado para la elaboración de páginas web. 
 
+### Materialize
+Es un framework CSS para mejorar la responsividad.
+
+### Oauth2
+OAuth2 es un protocolo de autorización que permite que los usuarios autoricen a terceros a acceder a su información. Se usa esta tecnología para la autenticación con Facebook. 
+
+# Para ejecutar utilizamos el siguiente comando:
 $ CLIENT_ID=369716050096850 CLIENT_SECRET='3c7d3d80fb916299658638ca689a28c6' node server.js

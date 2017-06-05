@@ -19,7 +19,7 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center">Calculadora</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        
+
       </ul>
     </div>
   </nav>
@@ -39,7 +39,11 @@
 </div>
 
 <% } else { %>
-	<p>Hello, <%= user.displayName %>. View your <a href="/profile">profile</a>.</p>
+	<p>Hola:, <%= user.displayName %>.</p>
+  <br>
+  <p>Este es tu numero de visitas a nuestra página web: <%=visitas %></p>
+  <br>
+  <p>Puedes ver tu perfíl aquí <a href="/profile">Perfil</a>.</p>
 
 	<% include calculadora %>
 
@@ -70,7 +74,7 @@
           <div class="footer-copyright">
             <div class="container">
             © 2017
-            
+
             </div>
           </div>
         </footer>

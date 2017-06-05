@@ -1869,4 +1869,4 @@
  * Expose XRegExp
  * ============================== */
 
-    //module.exports = XRegExp;
+    module.exports = XRegExp;

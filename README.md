@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ULL-ESIT-DSI-1617/proyecto-dsi-gabriel-danid-danir-l1.svg?branch=master)](https://travis-ci.org/ULL-ESIT-DSI-1617/proyecto-dsi-gabriel-danid-danir-l1)
 # Proyecto final DSI: Calculadora.
 ## Descripción
 La idea principal de nuestro proyecto es la realización de una calculadora, en la cual, podremos realizar unas operaciones básicas(suma, resta, multiplicación, división) así como unas operaciones más avanzadas(módulo, exponencial).
@@ -24,4 +25,4 @@ JavaScript (abreviado comúnmente JS) es un lenguaje de programación interpreta
 ### HTML
 HTML hace referencia al lenguaje de marcado para la elaboración de páginas web. 
 
-CLIENT_ID=369716050096850 CLIENT_SECRET='3c7d3d80fb916299658638ca689a28c6' node server.js
+$ CLIENT_ID=369716050096850 CLIENT_SECRET='3c7d3d80fb916299658638ca689a28c6' node server.js

@@ -1,0 +1,25 @@
+SHOP.getUser = function(userId,callback)
+{
+	stmt = db.prepare("SELECT * FROM clientes WHERE id = ?");
+	//pasamos el id del cliente a la consulta
+    stmt.bind(userId);
+    stmt.get(function(error, row)
+    {
+    	if(error)
+        {
+            throw err;
+        }
+        else
+        {
+        	//retornamos la fila con los datos del usuario
+            if(row)
+            {
+                callback("", row);
+            }
+            else
+            {
+            	console.log("El usuario no existe");
+            }
+        }
+    });
+}

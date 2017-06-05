@@ -1,13 +1,13 @@
+var Medida = require('./medida.js');
 
-
-var OperacionesBasicas = function(valor1, tipo){
+var OperacionesBasicas = function(valor1){
   console.log("Accedo a clase Operaciones Básicas");
-  Medida.call(this,valor1,tipo);
+  Medida.call(this,valor1);
 }
 
 OperacionesBasicas.prototype = new Medida();
 
-var Suma = function(valor1, valor2)
+ function Suma(valor1, valor2)
 {
   console.log("estoy sumando");
   console.log("Accedo a clase Suma");
@@ -153,3 +153,4 @@ Div.prototype.operacion = function()
 
 measures.div = Div;
 
+module.exports = measures;

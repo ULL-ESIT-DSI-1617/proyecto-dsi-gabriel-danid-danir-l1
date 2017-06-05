@@ -8,7 +8,7 @@
     "passport"
   ],
   "scripts": {
-  "test": "./node_modules/mocha/bin/mocha"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "author": "Jared Hanson",
   "license": "Unlicense",
@@ -33,6 +33,7 @@
     "passport": "^0.2.2",
     "passport-facebook": "^2.0.0",
     "should": "^11.2.1",
+    "sqlite3": "^3.1.8",
     "static": "^2.0.0"
   }
 }

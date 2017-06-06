@@ -39,7 +39,7 @@ Medida.prototype.to_s = function(){
       }
       catch(err) {
         console.log(err);
-        return 'Desconozco como convertir desde "'+tipo+'" hasta "'+destino+'"';
+        return 'Desconozco esta operación';
       }
     }
     else
